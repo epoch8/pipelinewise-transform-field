@@ -126,7 +126,7 @@ def do_transform(record: Dict,
                         field_val = get_xpath(value, field_path)
                         set_xpath(value, field_path, _transform_value(field_val, trans_type))
                     except KeyError:
-                        LOGGER.error('Field path %s does not exist', field_path)
+                        LOGGER.debug('Field path %s does not exist', field_path)
 
                 return_value = value
 
